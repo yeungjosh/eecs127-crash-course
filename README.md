@@ -1,182 +1,190 @@
-# EECS 127 Crash Course: Optimization for ML Engineers & Software Developers
+# EECS 127 Crash Course for ML/SWE
 
-> A practical, intuition-first guide to Berkeley's EECS 127 (Optimization Models in Engineering) from an ML/SWE perspective
+A hands-on crash course covering key optimization concepts from UC Berkeley's EECS 127 (Optimization Models in Engineering), tailored for Machine Learning Engineers and Software Engineers.
 
-## Overview
+## Course Overview
 
-This repository provides a crash course for **EECS 127: Optimization Models in Engineering** at UC Berkeley, designed specifically for Machine Learning Engineers and Software Developers who want to understand optimization through practical applications and intuitive examples.
+This crash course focuses on practical implementations of optimization techniques that are fundamental to modern machine learning and data science. Through 7 coding projects, you'll learn how optimization powers everything from image compression to recommender systems.
 
-**Why this matters for ML/SWE:**
-- **ML Perspective**: Every ML model you've trained uses optimization (gradient descent, Adam, SGD). Understanding the theory helps you debug training, choose better hyperparameters, and design custom loss functions.
-- **SWE Perspective**: Resource allocation, constraint solving, recommendation systems, and even compiler optimizations rely on these techniques.
+### What You'll Learn
 
-## Course Structure
+- **Linear Algebra for ML**: SVD, PCA, matrix factorization
+- **Convex Optimization**: Least-squares, L1/L2 regularization, gradient descent
+- **Optimization Problems**: Linear programming, quadratic programming
+- **Real-world Applications**: Image processing, recommender systems, portfolio optimization, signal processing
 
-### 🎯 Core Topics
+## Prerequisites
 
-1. **[Linear Algebra Foundations](./01-linear-algebra/)** - The building blocks
-   - Vectors, matrices, and why they matter in ML
-   - SVD and PCA (dimensionality reduction in practice)
-   - Eigenvalues and eigenvectors (PageRank, spectral clustering)
+- **Python** programming (intermediate level)
+- **Linear Algebra** basics (matrices, vectors, dot products)
+- **Calculus** fundamentals (derivatives, gradients)
+- **NumPy** familiarity (helpful but not required)
 
-2. **[Least Squares Optimization](./02-least-squares/)** - Your first optimizer
-   - Linear regression from scratch
-   - Ridge regression and why it prevents overfitting
-   - Applications: recommendation systems, curve fitting
+## Setup Instructions
 
-3. **[Linear Programming](./03-linear-programming/)** - Constraint solving
-   - Resource allocation (AWS cost optimization)
-   - Network flow problems (routing, matching)
-   - The Simplex algorithm
-
-4. **[Convex Optimization](./04-convex-optimization/)** - The sweet spot
-   - What makes a problem "easy" to solve
-   - Convex sets, functions, and why they guarantee global optima
-   - LP, QP, SOCP, SDP - the optimization zoo
-
-5. **[Duality & KKT Conditions](./05-duality-kkt/)** - The theory behind SVMs
-   - Lagrange multipliers and why they work
-   - Understanding SVM dual formulation
-   - Constraint handling in practice
-
-6. **[Regularization](./06-regularization/)** - Preventing overfitting
-   - L1 (LASSO) vs L2 (Ridge) regularization
-   - Feature selection with LASSO
-   - Elastic net and beyond
-
-7. **[Optimization Algorithms](./07-algorithms/)** - How optimizers work
-   - Gradient descent and its variants (SGD, Adam, RMSprop)
-   - Newton's method and second-order optimization
-   - When to use what
-
-8. **[Real-World Applications](./08-applications/)** - Putting it all together
-   - Training neural networks
-   - Portfolio optimization
-   - Hyperparameter tuning
-   - A/B testing and experimental design
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-**Math Background:**
-- Basic linear algebra (matrix multiplication, inverses)
-- Calculus (derivatives, gradients)
-- Probability (optional but helpful)
-
-**Programming:**
-- Python proficiency
-- Familiarity with NumPy
-- Experience with ML frameworks (PyTorch/TensorFlow) is a plus
-
-### Installation
+### 1. Install Dependencies
 
 ```bash
-git clone https://github.com/yourusername/eecs127-crash-course.git
-cd eecs127-crash-course
 pip install -r requirements.txt
-jupyter lab
 ```
 
-### Recommended Learning Path
+### 2. Launch Jupyter
 
-**For ML Engineers:**
-1. Start with 01-linear-algebra (focus on SVD/PCA)
-2. Jump to 06-regularization (LASSO/Ridge)
-3. Study 07-algorithms (gradient descent deep dive)
-4. Explore 05-duality-kkt (understand SVMs)
-5. Apply in 08-applications
-
-**For Software Engineers:**
-1. Start with 03-linear-programming (constraint problems)
-2. Move to 04-convex-optimization (problem formulation)
-3. Study 07-algorithms (implementation details)
-4. Explore 08-applications (system design problems)
-
-**Full Course (Recommended):**
-Follow the numerical order (01 → 08) for a comprehensive understanding.
-
-## 📚 What Makes This Different
-
-### Intuition First, Theory Second
-- Every concept explained with real-world analogies
-- Visual intuitions before mathematical rigor
-- "Why does this matter?" for each topic
-
-### Code-Driven Learning
-- Every concept implemented from scratch in Python
-- Production-ready examples using CVX, SciPy, PyTorch
-- Jupyter notebooks for interactive exploration
-
-### ML/SWE Context
-- Connect optimization to ML training loops
-- Show how to debug convergence issues
-- Explain design decisions in popular frameworks
-
-## 🛠️ Tech Stack
-
-- **Python 3.8+**: Core language
-- **NumPy**: Numerical computing
-- **CVXPY**: Convex optimization modeling
-- **SciPy**: Scientific computing
-- **Matplotlib/Seaborn**: Visualization
-- **Jupyter**: Interactive notebooks
-- **PyTorch** (optional): Deep learning examples
-
-## 📖 Each Topic Includes
-
-```
-XX-topic-name/
-├── notes/
-│   └── README.md          # Conceptual explanation with intuition
-├── examples/
-│   └── simple_example.py  # Minimal, runnable code
-│   └── real_world.py      # Production-style implementation
-└── notebooks/
-    └── interactive.ipynb  # Step-by-step Jupyter walkthrough
+```bash
+jupyter notebook
 ```
 
-## 🎓 Learning Outcomes
+### 3. Start Learning!
 
-After completing this crash course, you will:
+Follow the recommended order below, or jump to projects that interest you.
 
-- **Recognize** when a problem can be formulated as an optimization problem
-- **Choose** the right optimization technique for your use case
-- **Implement** optimizers from scratch and use production libraries
-- **Debug** training issues in ML models
-- **Understand** the theory behind popular ML algorithms (SVMs, LASSO, PCA)
-- **Apply** optimization to real-world engineering problems
+## Projects
 
-## 🤝 Contributing
+### 1. Image Compression with SVD
+**File**: `01_image_compression_svd.ipynb`
 
-Contributions welcome! Areas we'd love help with:
-- Additional real-world examples
-- Visualizations and interactive demos
-- Exercises with solutions
-- Debugging common pitfalls sections
+Learn how Singular Value Decomposition (SVD) enables image compression through low-rank matrix approximation.
 
-## 📚 References
+**Key Concepts**:
+- Singular Value Decomposition (SVD)
+- Low-rank approximation
+- Compression-quality tradeoff
 
-**Official Course Resources:**
-- [EECS 127 Official Page](https://people.eecs.berkeley.edu/~elghaoui/Teaching/EECS127/)
-- [Course Livebook](https://livebooklabs.com)
-
-**Recommended Textbooks:**
-- Boyd & Vandenberghe - [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/)
-- Strang - Linear Algebra and Learning from Data
-
-**Online Resources:**
-- [CVX Users Guide](https://www.cvxpy.org/)
-- [Distill.pub - Momentum](https://distill.pub/2017/momentum/)
-
-## 📝 License
-
-MIT License - feel free to use for learning and teaching!
-
-## ⭐ Star This Repo
-
-If you find this helpful, please star the repo and share with others who might benefit!
+**ML Relevance**: Foundation for dimensionality reduction, matrix factorization techniques used throughout ML.
 
 ---
 
-**Built for engineers who want to understand optimization, not just use it.**
+### 2. PCA for Dimensionality Reduction
+**File**: `02_pca_dimensionality_reduction.ipynb`
+
+Implement Principal Component Analysis from scratch and apply it to real datasets.
+
+**Key Concepts**:
+- Principal Component Analysis (PCA)
+- Eigenvalue decomposition
+- Variance maximization
+
+**ML Relevance**: Essential preprocessing technique for high-dimensional data, feature extraction, visualization.
+
+---
+
+### 3. Recommender System with Matrix Factorization
+**File**: `03_recommender_matrix_factorization.ipynb`
+
+Build a movie/product recommendation system using collaborative filtering.
+
+**Key Concepts**:
+- Matrix factorization
+- Alternating Least Squares (ALS)
+- Collaborative filtering
+
+**ML Relevance**: Powers Netflix, Amazon, Spotify recommendations. Core technique in recommendation systems.
+
+---
+
+### 4. LASSO Regression & Feature Selection
+**File**: `04_lasso_feature_selection.ipynb`
+
+Explore sparse optimization with L1 regularization for automatic feature selection.
+
+**Key Concepts**:
+- L1 regularization (LASSO)
+- Sparse optimization
+- Feature selection vs Ridge regression (L2)
+
+**ML Relevance**: Critical for high-dimensional data, prevents overfitting, automates feature engineering.
+
+---
+
+### 5. Logistic Regression from Scratch
+**File**: `05_logistic_regression_gradient_descent.ipynb`
+
+Implement logistic regression using gradient descent for binary classification.
+
+**Key Concepts**:
+- Gradient descent (batch vs stochastic)
+- Logistic regression
+- Convex optimization
+
+**ML Relevance**: Foundation of deep learning optimizers (SGD, Adam), essential classification algorithm.
+
+---
+
+### 6. Portfolio Optimization
+**File**: `06_portfolio_optimization.ipynb`
+
+Apply quadratic programming to the classic Markowitz portfolio optimization problem.
+
+**Key Concepts**:
+- Quadratic programming (QP)
+- Risk-return tradeoff
+- Constrained optimization with CVXPy
+
+**ML Relevance**: Demonstrates QP applications, constraint handling, used in resource allocation problems.
+
+---
+
+### 7. Compressed Sensing for Signal Recovery
+**File**: `07_compressed_sensing.ipynb`
+
+Recover signals and images from incomplete measurements using L1 minimization.
+
+**Key Concepts**:
+- Compressed sensing
+- Sparse signal recovery
+- L1 minimization
+
+**ML Relevance**: Medical imaging (MRI), signal processing, modern technique for underdetermined systems.
+
+---
+
+## Recommended Learning Path
+
+### For Complete Beginners
+Start with projects in order (1 → 7)
+
+### For ML Engineers
+Focus on: 2 (PCA) → 3 (Recommender) → 4 (LASSO) → 5 (Logistic Regression) → 7 (Compressed Sensing)
+
+### For Understanding Optimization
+Focus on: 5 (Gradient Descent) → 4 (LASSO) → 6 (QP with CVXPy) → 7 (Compressed Sensing)
+
+### For Computer Vision / Signal Processing
+Focus on: 1 (SVD) → 2 (PCA) → 7 (Compressed Sensing)
+
+## Tools & Libraries
+
+- **NumPy**: Numerical computations
+- **Matplotlib**: Visualization
+- **CVXPy**: Convex optimization modeling
+- **scikit-learn**: Reference implementations and datasets
+- **Jupyter**: Interactive notebooks
+
+## Additional Resources
+
+### UC Berkeley EECS 127 Official Materials
+- [Course Website](https://eecs127.github.io/)
+- [Professor El Ghaoui's Page](https://people.eecs.berkeley.edu/~elghaoui/Teaching/EECS127/)
+
+### Textbooks
+- **"Optimization Models"** by Calafiore & El Ghaoui
+- **"Convex Optimization"** by Boyd & Vandenberghe (free PDF available)
+
+### Online Resources
+- [CVXPy Documentation](https://www.cvxpy.org/)
+- [Stanford CS229 Notes](http://cs229.stanford.edu/notes/) (ML perspective)
+- [Boyd's Convex Optimization Course](https://web.stanford.edu/~boyd/cvxbook/)
+
+## Contributing
+
+Found a bug or have suggestions? Feel free to open an issue or submit a pull request!
+
+## License
+
+This educational material is provided for learning purposes.
+
+---
+
+**Happy Optimizing!** 🚀
+
+*Generated with Claude Code - An AI-powered crash course for mastering optimization fundamentals essential to modern ML engineering.*
