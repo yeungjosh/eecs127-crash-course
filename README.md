@@ -38,6 +38,23 @@ jupyter notebook
 
 Follow the recommended order below, or jump to projects that interest you.
 
+## Repository Layout
+
+Besides the notebooks, the repo has per-topic folders with written notes and runnable scripts. See [QUICKSTART.md](QUICKSTART.md) for a 30-minute path through them.
+
+| Folder | Notes | Example script |
+|---|---|---|
+| `01-linear-algebra/` | Ready | `examples/svd_recommender.py` |
+| `02-least-squares/` | Ready | `examples/ridge_regression.py` |
+| `03-linear-programming/` | Coming soon | - |
+| `04-convex-optimization/` | Ready | `examples/portfolio_optimization.py` |
+| `05-duality-kkt/` | Coming soon | - |
+| `06-regularization/` | Coming soon | - |
+| `07-algorithms/` | Coming soon | - |
+| `08-applications/` | Coming soon | - |
+
+Run a script from the repo root, e.g. `python 01-linear-algebra/examples/svd_recommender.py`.
+
 ## Projects
 
 ### 1. Image Compression with SVD
