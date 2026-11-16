@@ -55,6 +55,8 @@ Besides the notebooks, the repo has per-topic folders with written notes and run
 
 Run a script from the repo root, e.g. `python 01-linear-algebra/examples/svd_recommender.py`.
 
+To check that all example scripts still run, install `pytest` and run `pytest tests/` from the repo root (plots use a non-interactive backend).
+
 ## Projects
 
 ### 1. Image Compression with SVD
